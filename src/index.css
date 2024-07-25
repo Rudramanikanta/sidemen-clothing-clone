@@ -11,3 +11,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.travel{
+  animation-name: example;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  animation-timing-function: linear;
+}
+@keyframes example {
+  0%{
+    left: -10%;
+  }
+  100%{
+    left:-100%
+  }
+}
+#child {
+  display: none;
+}
+
+#parent:hover #child {
+  display: block;
+}
+
+#parent:hover #child div {
+  animation-name: rotate;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.footer__aside-top, .footer__aside-bottom {
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-8);
+  display: grid;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
